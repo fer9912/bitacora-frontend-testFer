@@ -27,6 +27,9 @@ FROM nginx:alpine
 # Copy the production-ready Angular app to the Nginx webserver's root directory
 COPY --from=build /app/dist /usr/share/nginx/html
 
+# Replace default Nginx configuration with custom configuration
+COPY nginx.conf /etc/nginx/nginx.conf
+
 # Expose port 80
 EXPOSE 8080
 
