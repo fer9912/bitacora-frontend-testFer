@@ -28,7 +28,7 @@ FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 8080
 
 # # Use the official Node.js image as the base image
 # FROM node:21.7.0 as build
